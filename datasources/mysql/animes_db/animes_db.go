@@ -28,8 +28,7 @@ func init() {
 	var err error
 	Client, err = sql.Open("mysql", dataSourceName)
 	if err != nil {
-		//panic(err)
-		return
+		panic(err)
 	}
 	if err = Client.Ping(); err != nil {
 		panic(err)
